@@ -58,4 +58,27 @@ For the api or backend we will be using Nest with prisma recipe
 ```
 npm i -g @nestjs/cli
 nest new api
+
+cd api
+pnpm add -D prisma
+npx prisma init
+```
+
+We will be doing local testing so we will be using sqlite database so in the api/.env file
+
+```
+DATABASE_URL="file:./dev.db"
+```
+
+And in the schema.prisma
+
+```
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
 ```
