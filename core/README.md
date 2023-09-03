@@ -38,3 +38,24 @@ Run project
 ```
 ns run ios|android
 ```
+
+### admin
+
+For the admin we will be building a custom one with Nuxt vue3
+
+```
+pnpm dlx nuxi@latest init admin
+
+cd admin
+
+pnpm dev
+```
+
+### api
+
+For the api or backend we will be using Nest with prisma recipe
+
+```
+npm i -g @nestjs/cli
+nest new api
+```
