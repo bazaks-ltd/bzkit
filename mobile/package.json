@@ -3,16 +3,20 @@
   "main": "src/app.ts",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "up": "pnpm install --shamefully-hoist"
+  },
   "dependencies": {
-    "@nativescript/core": "~8.5.0",
+    "@nativescript/core": "~8.5.9",
     "nativescript-vue": "3.0.0-beta.8"
   },
   "devDependencies": {
+    "@nativescript/ios": "8.5.2",
     "@nativescript/tailwind": "^2.0.1",
     "@nativescript/types": "~8.5.0",
-    "@nativescript/webpack": "~5.0.0",
-    "@types/node": "~17.0.21",
-    "tailwindcss": "^3.1.8",
+    "@nativescript/webpack": "~5.0.17",
+    "@types/node": "~17.0.45",
+    "tailwindcss": "^3.3.3",
     "typescript": "~4.9.5"
   }
 }

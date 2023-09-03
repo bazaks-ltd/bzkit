@@ -17,9 +17,24 @@ which is still in beta
 ns create mobile --template @nativescript-vue/template-blank@beta
 
 cd mobile
-ns run ios|android
 ```
 
 This template already has tailwind css https://tailwindcss.com/ included inside of it so no need to install it.
 
-#### pnpm
+Since we will be using pnpm
+
+```
+ns package-manager set npm
+```
+
+Double check
+
+```
+ns package-manager get
+```
+
+Run project
+
+```
+ns run ios|android
+```

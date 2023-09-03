@@ -6,13 +6,16 @@ settings:
 
 dependencies:
   '@nativescript/core':
-    specifier: ~8.5.0
+    specifier: ~8.5.9
     version: 8.5.9
   nativescript-vue:
     specifier: 3.0.0-beta.8
     version: 3.0.0-beta.8(webpack@5.88.2)
 
 devDependencies:
+  '@nativescript/ios':
+    specifier: 8.5.2
+    version: 8.5.2
   '@nativescript/tailwind':
     specifier: ^2.0.1
     version: 2.0.1(postcss@8.4.29)
@@ -20,13 +23,13 @@ devDependencies:
     specifier: ~8.5.0
     version: 8.5.0
   '@nativescript/webpack':
-    specifier: ~5.0.0
+    specifier: ~5.0.17
     version: 5.0.17(typescript@4.9.5)
   '@types/node':
-    specifier: ~17.0.21
+    specifier: ~17.0.45
     version: 17.0.45
   tailwindcss:
-    specifier: ^3.1.8
+    specifier: ^3.3.3
     version: 3.3.3
   typescript:
     specifier: ~4.9.5
@@ -291,6 +294,10 @@ packages:
       glob: 7.2.3
       mkdirp: 1.0.4
     dev: false
+
+  /@nativescript/ios@8.5.2:
+    resolution: {integrity: sha512-IqWcvkw7eKxnAjY+Kmbn3Cc5qRC/2LcALeoH9CQnpNDd3INGudFQz+KGfEHnK3VK9uUgnj+16TaIPj0LFLQKew==}
+    dev: true
 
   /@nativescript/tailwind@2.0.1(postcss@8.4.29):
     resolution: {integrity: sha512-sHLEf2q5aZluZuSdqUy/PggTCYx849/SguWiCGfWZzttF0k9DdmhinBpv4gsht7tj/j7aS0BjAKKDctBTSUrPQ==}
