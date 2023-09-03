@@ -3,7 +3,7 @@
 This is a fullstack JS kit for mobile, backend and front end code generation. Opiniated with best practices and Ready for production.
 Created by Bazaks Ltd - https://bazaks.com
 
-![Alt text](architecture.drawio.svg "a title")
+![architecture](architecture.drawio.svg)
 
 ## Frameworks used
 
