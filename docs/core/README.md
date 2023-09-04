@@ -7,6 +7,7 @@ This is the application core or the basics required to build the app.
 - mobile
 - admin
 - api
+- mail
 
 ### Mobile
 
@@ -82,3 +83,20 @@ generator client {
   provider = "prisma-client-js"
 }
 ```
+
+### mail
+
+For the mailing serivce we setup a temporary smtp server in node using haraka.
+
+To run the server
+
+```
+cd mail
+pnpm install
+pnpm mail:run
+```
+
+Install Swaks
+https://jetmore.org/john/code/swaks/
+
+To test the sending of the mail change the script in package.json **mail:test**
