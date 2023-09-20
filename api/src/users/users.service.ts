@@ -31,7 +31,6 @@ export class UsersService {
       orderBy,
     });
   }
-
   async createUser(_data: Prisma.UserCreateInput): Promise<User> {
     let data = { ..._data };
     data['password'] = await argon2.hash(_data.password);

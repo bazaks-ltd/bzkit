@@ -11,9 +11,12 @@ datasource db {
 }
 
 model User {
-  id         Int     @id @default(autoincrement())
-  email      String  @unique
-  first_name String?
-  last_name  String?
-  password   String?
+  id                 Int     @id @default(autoincrement())
+  email              String  @unique
+  first_name         String?
+  last_name          String?
+  password           String?
+  is_email_confirmed Boolean @default(false)
+
+  @@map("users")
 }

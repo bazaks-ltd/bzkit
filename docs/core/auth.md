@@ -33,6 +33,8 @@ model User {
     first_name String?
     last_name String?
     password String?
+
+      @@map("users")
 }
 ```
 
