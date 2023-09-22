@@ -6,6 +6,6 @@ export class EmailController {
   constructor(private readonly emailService: EmailService) {}
   @Get('example')
   async example() {
-    return this.emailService.example();
+    return this.emailService.sendVerificationLink('terence@bazaks.com');
   }
 }
