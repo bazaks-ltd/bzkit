@@ -1,4 +1,4 @@
-import { createApp } from 'nativescript-vue';
-import Home from './components/Home.vue';
+import { createApp } from "nativescript-vue";
+import App from "./app.vue";
 
-createApp(Home).start();
+createApp(App).start();
