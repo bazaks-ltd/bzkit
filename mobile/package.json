@@ -7,6 +7,7 @@
     "up": "pnpm install --shamefully-hoist"
   },
   "dependencies": {
+    "@nativescript-community/tween": "^0.0.14",
     "@nativescript/core": "~8.5.9",
     "nativescript-vue": "3.0.0-beta.8"
   },

@@ -4,8 +4,9 @@
 
 ActionBar {
   background-color: #65adf1;
-  color: hsl(var(--p))
+  /* color: hsl(var(--p)) */
 }
+
 
 
 @layer components {
