@@ -4,9 +4,17 @@
 
 ActionBar {
   background-color: #65adf1;
-  color: white;
+  color: hsl(var(--p))
 }
 
-.btn {
-  @apply px-4 py-3 font-bold text-base rounded-lg bg-primary text-white
+
+@layer components {
+  .btn {
+    @apply px-4 py-3 font-bold text-base rounded-lg bg-primary text-white
+  }
+  
+  .textfield {
+    @apply w-full p-2 rounded-lg border-4 border-gray-300 
+  }
 }
+

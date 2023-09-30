@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 import AuthLandingPage from './pages/auth/AuthLandingPage.vue';
-
+import Components from './pages/Components.vue';
 
 </script>
 
 <template>
     <Frame>
-        <AuthLandingPage></AuthLandingPage>
+        <Components></Components>
     </Frame>
 </template>
 
