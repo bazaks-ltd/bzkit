@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-const colors = require("tailwindcss/colors");
+// const colors = require("tailwindcss/colors");
+const { colors } = require("./colors.cjs");
 
 module.exports = {
   content: ["./src/**/*.{css,xml,html,vue,svelte,ts,tsx}"],
@@ -8,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#ff2323",
+        primary: colors.primary,
         bzred: {
           50: "#fff0f0",
           100: "#ffdddd",
