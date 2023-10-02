@@ -2,20 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-ActionBar {
-  background-color: #65adf1;
-  /* color: hsl(var(--p)) */
-}
-
-
-
 @layer components {
-  .btn {
-    @apply px-4 py-3 font-bold text-base rounded-lg bg-primary text-white
+  ActionBar {
+    @apply bg-primary text-white;
   }
-  
+
+  .btn {
+    @apply px-4 py-3 font-bold text-base rounded-lg bg-primary text-white;
+  }
+
   .textfield {
-    @apply w-full p-2 rounded-lg border-4 border-gray-300 
+    @apply w-full p-2 rounded-lg border-4 border-gray-300;
   }
 }
 
+.fab {
+  font-family: "Font Awesome 6 Brands", "fa-brands-400";
+  font-weight: 400;
+}
+
+.far {
+  font-family: "Font Awesome 6 Free", "fa-regular-400";
+  font-weight: 400;
+}
+
+.fas {
+  font-family: "Font Awesome 6 Free", "fa-solid-900";
+  font-weight: 900;
+}
+
+.fa4 {
+  font-family: "Font Awesome v4 Compatibility", "fa-v4compatibility";
+  font-weight: 400;
+}

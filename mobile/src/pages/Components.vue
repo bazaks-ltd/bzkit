@@ -1,5 +1,9 @@
 <script lang="ts" setup>
-import { ContentView, CustomLayoutView, StackLayout } from '@nativescript/core';
+import { ContentView, CustomLayoutView, FlexboxLayout, StackLayout } from '@nativescript/core';
+import FASolidIcons from './demo/FASolidIcons.vue';
+import FABrandsIcons from './demo/FABrandsIcons.vue';
+import FARegularIcons from './demo/FARegularIcons.vue';
+
 
 
 
@@ -9,11 +13,11 @@ import { ContentView, CustomLayoutView, StackLayout } from '@nativescript/core';
 
 <template>
     <Page actionBarHidden="false">
-        <ActionBar class="bg-bzred-500">
+        <ActionBar>
             <Label text="Components" class="font-bold text-lg text-white" />
         </ActionBar>
         <ScrollView orientation="vertical">
-            <FlexboxLayout flexDirection="column">
+            <FlexboxLayout flexDirection="column" class="p-2">
                 <!-- Typography -->
                 <ContentView height="16"></ContentView>
                 <label class="text-3xl text-black" text="Typography" />
@@ -31,6 +35,22 @@ import { ContentView, CustomLayoutView, StackLayout } from '@nativescript/core';
                 <label class="text-3xl text-black " text="Spinner" />
 
                 <ActivityIndicator busy="true" width="24" height="24" class="" />
+
+                <!-- Icons -->
+                <label class="text-3xl text-black " text="Icons" />
+                <FlexboxLayout>
+                    <Label text="&#xf185;" class="fas" />
+                    <label class="text-base text-shark-900" text="Font Awesome 6 icons" />
+                </FlexboxLayout>
+                <FlexboxLayout flexDirection="column">
+                    <Button text="FA Solid Icons" class="btn mt-2" androidElevation="0" @tap="$navigateTo(FASolidIcons)" />
+                    <Button text="FA Regular Icons" class="btn mt-2" androidElevation="0"
+                        @tap="$navigateTo(FARegularIcons)" />
+                    <Button text="FA Brands Icons" class="btn mt-2" androidElevation="0"
+                        @tap="$navigateTo(FABrandsIcons)" />
+                </FlexboxLayout>
+
+
 
 
 
