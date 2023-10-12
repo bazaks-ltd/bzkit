@@ -17,7 +17,7 @@ import { colors, shark } from '../../colors.cjs'
             <Label text="Components" class="font-bold text-lg text-white" />
         </ActionBar>
         <ScrollView orientation="vertical">
-            <FlexboxLayout flexDirection="column" class="p-2">
+            <FlexboxLayout flexDirection="column" class="p-2 bg-base-100">
                 <!-- Typography -->
                 <ContentView height="16"></ContentView>
                 <label class="text-3xl text-black" text="Typography" />
@@ -58,7 +58,7 @@ import { colors, shark } from '../../colors.cjs'
                 <ContentView height="16"></ContentView>
                 <!-- Content View  -->
                 <ContentView height="16"></ContentView>
-                <label class="text-3xl text-black " text="Spinner" />
+                <label class="text-3xl text-black " text="ActivityIndicator" />
 
                 <ActivityIndicator busy="true" width="24" height="24" :color="colors.primary" />
 
