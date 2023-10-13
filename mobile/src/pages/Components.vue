@@ -4,9 +4,17 @@ import FASolidIcons from './demo/FASolidIcons.vue';
 import FABrandsIcons from './demo/FABrandsIcons.vue';
 import FARegularIcons from './demo/FARegularIcons.vue';
 import { colors, shark } from '../../colors.cjs'
+import { useLoader } from '~/composables/useLoader';
 
+const { isLoading } = useLoader();
 
+const activateLoader = () => {
+    isLoading.value = true;
 
+    setTimeout(() => {
+        isLoading.value = false;
+    }, 5000);
+}
 
 
 </script>
@@ -56,7 +64,7 @@ import { colors, shark } from '../../colors.cjs'
                     </FlexboxLayout>
                 </WrapLayout>
                 <ContentView height="16"></ContentView>
-                <!-- Content View  -->
+                <!-- ActivityIndicator  -->
                 <ContentView height="16"></ContentView>
                 <label class="text-3xl text-black " text="ActivityIndicator" />
 
@@ -84,8 +92,9 @@ import { colors, shark } from '../../colors.cjs'
                 <ContentView height="16" class="example"></ContentView>
                 <Button id="myButton" text="{N}" class="animate-bounce" />
                 <label class="text-3xl text-black" text="Loader" />
-
                 <Progress />
+                <Button text="Loader" class="btn mt-2" androidElevation="0" @tap="activateLoader" />
+
                 <button text="Button" />
                 <DatePicker />
                 <TimePicker />
