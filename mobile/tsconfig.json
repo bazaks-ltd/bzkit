@@ -8,7 +8,6 @@
     "sourceMap": true,
     "noEmitHelpers": true,
     "importHelpers": true,
-    "allowJs": true,
     "baseUrl": ".",
     "paths": {
       "~/*": ["src/*"],
