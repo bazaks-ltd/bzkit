@@ -96,8 +96,53 @@
     min-height: 4rem;
     font-size: 1.125rem;
   }
-  .textfield {
-    @apply w-full p-2 rounded-lg border-4 border-gray-300;
+  .input {
+    @apply bg-base-100 rounded-xl placeholder:text-shark-300 text-shark-500 focus:border-4 focus:border-shark-400 px-2;
+    height: 3rem;
+  }
+
+  .input-bordered {
+    @apply border-shark-400 border-2;
+  }
+
+  .input-ghost {
+    @apply bg-transparent;
+  }
+
+  .input-primary {
+    @apply border-primary border-2 focus:border-4 focus:border-primary;
+  }
+  .input-secondary {
+    @apply border-secondary border-2 focus:border-4 focus:border-secondary;
+  }
+  .input-accent {
+    @apply border-accent border-2 focus:border-4 focus:border-accent;
+  }
+  .input-info {
+    @apply border-info border-2 focus:border-4 focus:border-info;
+  }
+  .input-success {
+    @apply border-success border-2 focus:border-4 focus:border-success;
+  }
+  .input-warning {
+    @apply border-warning border-2 focus:border-4 focus:border-warning;
+  }
+  .input-error {
+    @apply border-error border-2 focus:border-4 focus:border-error;
+  }
+  .input-xs {
+    @apply rounded-lg;
+    height: 1.5rem;
+    font-size: 0.75rem;
+  }
+  .input-sm {
+    @apply rounded-lg;
+    height: 2rem;
+    font-size: 0.875rem;
+  }
+  .input-lg {
+    height: 4rem;
+    font-size: 1.125rem;
   }
 }
 

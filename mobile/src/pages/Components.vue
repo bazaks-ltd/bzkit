@@ -160,9 +160,26 @@ import { colors, shark } from '../../colors.cjs'
                 <!-- Input -->
                 <ContentView height="16"></ContentView>
                 <label class="text-3xl text-black " text="Inputs" />
-                <label class="text-xl text-shark-600 " text="Buttons with brands" />
-                <ContentView height="16"></ContentView>
-                <TextField hint="Enter text..." class="textfield" />
+                <label class="text-xl text-shark-600 " text="Input state" />
+
+                <FlexboxLayout flexDirection="column">
+                    <TextField hint="Type here" class="input" />
+                    <TextField hint="Bordered input" class="input input-bordered mt-2" />
+                    <TextField hint="Ghost input" class="input input-ghost mt-2" />
+                    <TextField hint="Primary" class="input input-primary mt-2" />
+                    <TextField hint="Secondary" class="input input-secondary mt-2" />
+                    <TextField hint="Accent" class="input input-accent mt-2" />
+                    <TextField hint="Info" class="input input-info mt-2" />
+                    <TextField hint="Success" class="input input-success mt-2" />
+                    <TextField hint="Warning" class="input input-warning mt-2" />
+                    <TextField hint="Error" class="input input-error mt-2" />
+                    <TextField hint="Disabled" class="input input-error mt-2" dis />
+                    <label class="text-xl text-shark-600 " text="Input sizes" />
+                    <TextField hint="XS input" class="input input-bordered input-xs mt-2" />
+                    <TextField hint="SM input" class="input input-bordered input-sm mt-2" />
+                    <TextField hint="Normal input" class="input input-bordered mt-2" />
+                    <TextField hint="LG input" class="input input-bordered input-lg mt-2" />
+                </FlexboxLayout>
 
                 <DatePicker />
                 <TimePicker />
