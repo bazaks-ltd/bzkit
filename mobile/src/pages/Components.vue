@@ -76,17 +76,94 @@ import { colors, shark } from '../../colors.cjs'
                         @tap="$navigateTo(FABrandsIcons)" />
                 </FlexboxLayout>
 
-
-
-
-
-
+                <!-- Loader -->
                 <ContentView height="16" class="example"></ContentView>
                 <Button id="myButton" text="{N}" class="animate-bounce" />
                 <label class="text-3xl text-black" text="Loader" />
 
                 <Progress />
                 <button text="Button" />
+
+
+                <!-- Buttons -->
+                <label class="text-3xl text-black " text="Buttons" />
+                <label class="text-xl text-shark-600 " text="Buttons with brands" />
+                <ContentView height="16"></ContentView>
+
+                <FlexboxLayout flexWrap="wrap">
+                    <Button text="Button" class="btn m-2" androidElevation="0" />
+                    <Button text="Neutral" class="btn btn-neutral m-2" androidElevation="0" />
+                    <Button text="Primary" class="btn btn-primary m-2" androidElevation="0" />
+                    <Button text="Secondary" class="btn btn-secondary m-2" androidElevation="0" />
+                    <Button text="Accent" class="btn btn-accent m-2" androidElevation="0" />
+                    <Button text="Ghost" class="btn btn-ghost m-2" androidElevation="0" />
+                    <Button text="Link" textDecoration="underline" class="btn btn-link m-2" androidElevation="0"></Button>
+                </FlexboxLayout>
+
+                <label class="text-xl text-shark-600 " text="Buttons with state colors" />
+                <FlexboxLayout flexWrap="wrap">
+                    <Button text="Info" class="btn btn-info m-2" androidElevation="0" />
+                    <Button text="Success" class="btn btn-success m-2" androidElevation="0" />
+                    <Button text="Warning" class="btn btn-warning m-2" androidElevation="0" />
+                    <Button text="Error" class="btn btn-error m-2" androidElevation="0" />
+                </FlexboxLayout>
+
+                <label class="text-xl text-shark-600 " text="Outline buttons " />
+                <FlexboxLayout flexWrap="wrap">
+                    <Button text="Default" class="btn btn-outline m-2" androidElevation="0" />
+                    <Button text="Primary" class="btn btn-outline btn-primary m-2" androidElevation="0" />
+                    <Button text="Secondary" class="btn btn-outline btn-secondary m-2" androidElevation="0" />
+                    <Button text="Accent" class="btn btn-outline btn-accent m-2" androidElevation="0" />
+                </FlexboxLayout>
+
+                <label class="text-xl text-shark-600 " text="Outline buttons with state colors" />
+                <FlexboxLayout flexWrap="wrap">
+                    <Button text="Info" class="btn btn-outline btn-info m-2" androidElevation="0" />
+                    <Button text="Success" class="btn btn-outline btn-success m-2" androidElevation="0" />
+                    <Button text="Warning" class="btn btn-outline btn-warning m-2" androidElevation="0" />
+                    <Button text="Error" class="btn btn-outline btn-error m-2" androidElevation="0" />
+                </FlexboxLayout>
+                <label class="text-xl text-shark-600 " text="Button Size" />
+                <FlexboxLayout flexDirection="row" alignItems="center" flexWrap="wrap">
+                    <Button text="Large" class="btn btn-lg m-2" androidElevation="0" />
+                    <Button text="Normal" class="btn m-2" androidElevation="0" />
+                    <Button text="Small" class="btn btn-sm m-2" androidElevation="0" />
+                    <Button text="Tiny" class="btn btn-xs m-2" androidElevation="0" />
+                </FlexboxLayout>
+                <label class="text-xl text-shark-600 " text="Icon Button" />
+                <FlexboxLayout alignItems="center">
+                    <Button class="btn btn-primary">
+                        <FormattedString>
+                            <Span text="&#xf099;" class="fab"></Span>
+                            <Span text=" Icon left"></Span>
+                        </FormattedString>
+                    </Button>
+                    <Button class="btn btn-primary ml-2">
+                        <FormattedString>
+                            <Span text="Icon Right "></Span>
+                            <Span text="&#xf099;" class="fab"></Span>
+                        </FormattedString>
+                    </Button>
+                    <Button class="btn btn-primary ml-2">
+                        <FormattedString>
+                            <Span text="&#xf099;" class="fab"></Span>
+                        </FormattedString>
+                    </Button>
+                    <Button class="btn btn-primary ml-2 rounded-full">
+                        <FormattedString>
+                            <Span text="&#xf099;" class="fab"></Span>
+                        </FormattedString>
+                    </Button>
+                </FlexboxLayout>
+
+
+                <!-- Input -->
+                <ContentView height="16"></ContentView>
+                <label class="text-3xl text-black " text="Inputs" />
+                <label class="text-xl text-shark-600 " text="Buttons with brands" />
+                <ContentView height="16"></ContentView>
+                <TextField hint="Enter text..." class="textfield" />
+
                 <DatePicker />
                 <TimePicker />
 

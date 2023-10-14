@@ -8,9 +8,94 @@
   }
 
   .btn {
-    @apply px-4 py-3 font-bold text-base rounded-lg bg-primary text-white;
+    @apply px-4 py-3 font-bold text-neutral rounded-lg bg-neutral-content;
+    height: 3rem;
   }
 
+  .btn-neutral {
+    @apply text-neutral-content bg-neutral;
+  }
+
+  .btn-primary {
+    @apply text-primary-content bg-primary;
+  }
+
+  .btn-secondary {
+    @apply text-secondary-content bg-secondary;
+  }
+
+  .btn-accent {
+    @apply text-accent-content bg-accent;
+  }
+
+  .btn-ghost {
+    @apply text-neutral bg-transparent;
+  }
+
+  .btn-link {
+    @apply text-primary bg-transparent px-0 py-0;
+  }
+
+  .btn-info {
+    @apply text-info-content bg-info;
+  }
+  .btn-success {
+    @apply text-success-content bg-success;
+  }
+  .btn-warning {
+    @apply text-warning-content bg-warning;
+  }
+  .btn-error {
+    @apply text-error-content bg-error;
+  }
+
+  .btn-outline {
+    @apply border-4 border-neutral bg-transparent;
+  }
+  .btn-outline.btn-primary {
+    @apply text-primary border-primary border-4 bg-transparent;
+  }
+  .btn-outline.btn-secondary {
+    @apply text-secondary border-secondary border-4 bg-transparent;
+  }
+  .btn-outline.btn-accent {
+    @apply text-accent border-accent border-4 bg-transparent;
+  }
+
+  .btn-outline.btn-info {
+    @apply text-info border-info border-4 bg-transparent;
+  }
+  .btn-outline.btn-success {
+    @apply text-success border-success border-4 bg-transparent;
+  }
+  .btn-outline.btn-warning {
+    @apply text-warning border-warning border-4 bg-transparent;
+  }
+  .btn-outline.btn-error {
+    @apply text-error border-error border-4 bg-transparent;
+  }
+
+  .btn-xs {
+    height: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    min-height: 1.5rem;
+    font-size: 0.75rem;
+  }
+  .btn-sm {
+    height: 2rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    min-height: 2rem;
+    font-size: 0.875rem;
+  }
+  .btn-lg {
+    height: 4rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    min-height: 4rem;
+    font-size: 1.125rem;
+  }
   .textfield {
     @apply w-full p-2 rounded-lg border-4 border-gray-300;
   }
