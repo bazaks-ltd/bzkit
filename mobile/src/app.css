@@ -188,6 +188,36 @@
   .textView-lg {
     font-size: 1.125rem;
   }
+
+  .switch {
+    color: theme("colors.shark.300");
+    background-color: theme("colors.shark.200");
+    off-background-color: theme("colors.shark.300");
+  }
+  :checked.switch {
+    color: theme("colors.neutral");
+  }
+  :checked.switch-primary {
+    color: theme("colors.primary");
+  }
+  :checked.switch-secondary {
+    color: theme("colors.secondary");
+  }
+  :checked.switch-accent {
+    color: theme("colors.accent");
+  }
+  :checked.switch-success {
+    color: theme("colors.success");
+  }
+  :checked.switch-warning {
+    color: theme("colors.warning");
+  }
+  :checked.switch-info {
+    color: theme("colors.info");
+  }
+  :checked.switch-error {
+    color: theme("colors.error");
+  }
 }
 
 .fab {

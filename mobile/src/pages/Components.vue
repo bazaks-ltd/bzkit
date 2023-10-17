@@ -209,7 +209,6 @@ const setBlockingLoader = () => {
                     <TextView hint="Error" class="textView textView-error h-32 mt-2" />
                     <TextView hint="Disabled" class="textView textView-error h-32 mt-2" dis />
                     <label class="text-xl text-shark-600 " text="textView sizes" />
-                    <label class="text-base text-warning" text="Not supporting small and Tiny for time being" />
                     <TextView hint="XS textView" class="textView textView-bordered textView-xs mt-2" />
                     <TextView hint="SM textView" class="textView textView-bordered textView-sm mt-2" />
                     <TextField hint="Normal textView" class="textView textView-bordered h-32 mt-2" />
@@ -218,6 +217,46 @@ const setBlockingLoader = () => {
 
                 <DatePicker />
                 <TimePicker />
+
+                <!-- Text Area -->
+                <ContentView height="16"></ContentView>
+                <label class="text-3xl text-black " text="Toggle / Switch" />
+                <label class="text-xl text-shark-600 " text="toggle" />
+                <FlexboxLayout flexDirection="row" justifyContent="space-between">
+                    <label class="text-base text-shark-600 " text="Normal" />
+                    <Switch class="switch" />
+                </FlexboxLayout>
+                <FlexboxLayout flexDirection="row" justifyContent="space-between">
+                    <label class="text-base text-shark-600 " text="Primary" />
+                    <Switch class="switch switch-primary" />
+                </FlexboxLayout>
+                <FlexboxLayout flexDirection="row" justifyContent="space-between">
+                    <label class="text-base text-shark-600 " text="Secondary" />
+                    <Switch class="switch switch-secondary" />
+                </FlexboxLayout>
+                <FlexboxLayout flexDirection="row" justifyContent="space-between">
+                    <label class="text-base text-shark-600 " text="Accent" />
+                    <Switch class="switch switch-accent" />
+                </FlexboxLayout>
+                <FlexboxLayout flexDirection="row" justifyContent="space-between">
+                    <label class="text-base text-shark-600 " text="Success" />
+                    <Switch class="switch switch-success" />
+                </FlexboxLayout>
+                <FlexboxLayout flexDirection="row" justifyContent="space-between">
+                    <label class="text-base text-shark-600 " text="Warning" />
+                    <Switch class="switch switch-warning" />
+                </FlexboxLayout>
+                <FlexboxLayout flexDirection="row" justifyContent="space-between">
+                    <label class="text-base text-shark-600 " text="Info" />
+                    <Switch class="switch switch-info" />
+                </FlexboxLayout>
+                <FlexboxLayout flexDirection="row" justifyContent="space-between">
+                    <label class="text-base text-shark-600 " text="Error" />
+                    <Switch class="switch switch-error" />
+                </FlexboxLayout>
+
+
+
 
                 <image src="~/assets/logo.png" height="70" stretch="aspectFit" />
                 <label text="Label" />
