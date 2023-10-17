@@ -125,10 +125,11 @@ import { colors, shark } from '../../colors.cjs'
                 </FlexboxLayout>
                 <label class="text-xl text-shark-600 " text="Button Size" />
                 <FlexboxLayout flexDirection="row" alignItems="center" flexWrap="wrap">
+                    <label class="text-base text-warning" text="Not supporting small and Tiny for time being" />
                     <Button text="Large" class="btn btn-lg m-2" androidElevation="0" />
                     <Button text="Normal" class="btn m-2" androidElevation="0" />
-                    <Button text="Small" class="btn btn-sm m-2" androidElevation="0" />
-                    <Button text="Tiny" class="btn btn-xs m-2" androidElevation="0" />
+                    <!-- <Button text="Small" class="btn btn-sm m-2" androidElevation="0" />
+                    <Button text="Tiny" class="btn btn-xs m-2" androidElevation="0" /> -->
                 </FlexboxLayout>
                 <label class="text-xl text-shark-600 " text="Icon Button" />
                 <FlexboxLayout alignItems="center">
@@ -175,8 +176,9 @@ import { colors, shark } from '../../colors.cjs'
                     <TextField hint="Error" class="input input-error mt-2" />
                     <TextField hint="Disabled" class="input input-error mt-2" dis />
                     <label class="text-xl text-shark-600 " text="Input sizes" />
-                    <TextField hint="XS input" class="input input-bordered input-xs mt-2" />
-                    <TextField hint="SM input" class="input input-bordered input-sm mt-2" />
+                    <label class="text-base text-warning" text="Not supporting small and Tiny for time being" />
+                    <!-- <TextField hint="XS input" class="input input-bordered input-xs mt-2" /> -->
+                    <!-- <TextField hint="SM input" class="input input-bordered input-sm mt-2" /> -->
                     <TextField hint="Normal input" class="input input-bordered mt-2" />
                     <TextField hint="LG input" class="input input-bordered input-lg mt-2" />
                 </FlexboxLayout>
