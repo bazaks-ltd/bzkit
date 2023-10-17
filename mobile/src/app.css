@@ -144,6 +144,50 @@
     height: 4rem;
     font-size: 1.125rem;
   }
+  .textView {
+    @apply bg-base-100 rounded-xl placeholder:text-shark-300 text-shark-500 focus:border-4 focus:border-shark-400 px-2;
+  }
+
+  .textView-bordered {
+    @apply border-shark-400 border-2;
+  }
+
+  .textView-ghost {
+    @apply bg-transparent;
+  }
+
+  .textView-primary {
+    @apply border-primary border-2 focus:border-4 focus:border-primary;
+  }
+  .textView-secondary {
+    @apply border-secondary border-2 focus:border-4 focus:border-secondary;
+  }
+  .textView-accent {
+    @apply border-accent border-2 focus:border-4 focus:border-accent;
+  }
+  .textView-info {
+    @apply border-info border-2 focus:border-4 focus:border-info;
+  }
+  .textView-success {
+    @apply border-success border-2 focus:border-4 focus:border-success;
+  }
+  .textView-warning {
+    @apply border-warning border-2 focus:border-4 focus:border-warning;
+  }
+  .textView-error {
+    @apply border-error border-2 focus:border-4 focus:border-error;
+  }
+  .textView-xs {
+    @apply rounded-lg;
+    font-size: 0.75rem;
+  }
+  .textView-sm {
+    @apply rounded-lg;
+    font-size: 0.875rem;
+  }
+  .textView-lg {
+    font-size: 1.125rem;
+  }
 }
 
 .fab {

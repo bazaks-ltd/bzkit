@@ -4,9 +4,17 @@ import FASolidIcons from './demo/FASolidIcons.vue';
 import FABrandsIcons from './demo/FABrandsIcons.vue';
 import FARegularIcons from './demo/FARegularIcons.vue';
 import { colors, shark } from '../../colors.cjs'
+import { useLoader } from '~/composables/useLoader';
 
 
+const { isLoading } = useLoader();
+const setBlockingLoader = () => {
+    isLoading.value = true;
 
+    setTimeout(() => {
+        isLoading.value = false
+    }, 5000);
+}
 
 
 </script>
@@ -82,7 +90,7 @@ import { colors, shark } from '../../colors.cjs'
                 <label class="text-3xl text-black" text="Loader" />
 
                 <Progress />
-                <button text="Button" />
+                <button text="Button" @tap="setBlockingLoader" />
 
 
                 <!-- Buttons -->
@@ -160,7 +168,7 @@ import { colors, shark } from '../../colors.cjs'
 
                 <!-- Input -->
                 <ContentView height="16"></ContentView>
-                <label class="text-3xl text-black " text="Inputs" />
+                <label class="text-3xl text-black " text="Text Inputs" />
                 <label class="text-xl text-shark-600 " text="Input state" />
 
                 <FlexboxLayout flexDirection="column">
@@ -181,6 +189,31 @@ import { colors, shark } from '../../colors.cjs'
                     <!-- <TextField hint="SM input" class="input input-bordered input-sm mt-2" /> -->
                     <TextField hint="Normal input" class="input input-bordered mt-2" />
                     <TextField hint="LG input" class="input input-bordered input-lg mt-2" />
+                </FlexboxLayout>
+
+                <!-- Text Area -->
+                <ContentView height="16"></ContentView>
+                <label class="text-3xl text-black " text="Text View" />
+                <label class="text-xl text-shark-600 " text="Input Area" />
+
+                <FlexboxLayout flexDirection="column">
+                    <TextView hint="Type here" class="textView h-32" />
+                    <TextView hint="Bordered textView" class="textView textView-bordered h-32 mt-2" />
+                    <TextView hint="Ghost textView" class="textView textView-ghost h-32 mt-2" />
+                    <TextView hint="Primary" class="textView textView-primary h-32 mt-2" />
+                    <TextView hint="Secondary" class="textView textView-secondary h-32 mt-2" />
+                    <TextView hint="Accent" class="textView textView-accent h-32 mt-2" />
+                    <TextView hint="Info" class="textView textView-info h-32 mt-2" />
+                    <TextView hint="Success" class="textView textView-success h-32 mt-2" />
+                    <TextView hint="Warning" class="textView textView-warning h-32 mt-2" />
+                    <TextView hint="Error" class="textView textView-error h-32 mt-2" />
+                    <TextView hint="Disabled" class="textView textView-error h-32 mt-2" dis />
+                    <label class="text-xl text-shark-600 " text="textView sizes" />
+                    <label class="text-base text-warning" text="Not supporting small and Tiny for time being" />
+                    <TextView hint="XS textView" class="textView textView-bordered textView-xs mt-2" />
+                    <TextView hint="SM textView" class="textView textView-bordered textView-sm mt-2" />
+                    <TextField hint="Normal textView" class="textView textView-bordered h-32 mt-2" />
+                    <TextField hint="LG textView" class="textView textView-bordered textView-lg h-32 mt-2" />
                 </FlexboxLayout>
 
                 <DatePicker />
