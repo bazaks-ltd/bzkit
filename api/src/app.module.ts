@@ -5,6 +5,8 @@ import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
 import { EmailModule } from './email/email.module';
 import { MailerModule } from '@nestjs-modules/mailer';
+import { PasetoController } from './paseto/paseto.controller';
+import { PasetoService } from './paseto/paseto.service';
 
 @Module({
   imports: [
@@ -22,7 +24,7 @@ import { MailerModule } from '@nestjs-modules/mailer';
       },
     }),
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [AppController, PasetoController],
+  providers: [AppService, PasetoService],
 })
 export class AppModule {}

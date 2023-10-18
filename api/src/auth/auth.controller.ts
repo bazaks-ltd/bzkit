@@ -14,4 +14,13 @@ export class AuthController {
   ): Promise<UserModel> {
     return this.userService.createUser(userData);
   }
+
+  @Post('login')
+  async loginUser(
+    @Body()
+    userData: CreateUserDto,
+  ): Promise<String> {
+    return 'cool';
+    // return this.userService.createUser(userData);
+  }
 }
