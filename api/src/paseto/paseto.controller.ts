@@ -34,4 +34,9 @@ export class PasetoController {
   async decrypt(@Body() { token }): Promise<any> {
     return this.pasetoService.decrypt(token);
   }
+
+  @Post('decode')
+  async decode(@Body() { token }): Promise<any> {
+    return this.pasetoService.decode(token);
+  }
 }

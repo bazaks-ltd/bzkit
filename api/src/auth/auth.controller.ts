@@ -1,13 +1,16 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Header, Post } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { User as UserModel } from '@prisma/client';
-import { CreateUserDto } from 'src/users/users.dto';
+import { CreateUserDto, LoginUserDto } from 'src/users/users.dto';
 import { UsersService } from 'src/users/users.service';
 
+@ApiTags('auth')
 @Controller('auth')
 export class AuthController {
   constructor(private readonly userService: UsersService) {}
 
   @Post('register')
+  @Header('Content-Type', 'application/json')
   async registerUser(
     @Body()
     userData: CreateUserDto,
@@ -16,11 +19,12 @@ export class AuthController {
   }
 
   @Post('login')
+  @Header('Content-Type', 'application/json')
   async loginUser(
     @Body()
-    userData: CreateUserDto,
+    userData: LoginUserDto,
   ): Promise<String> {
-    return 'cool';
+    return this.userService.validateUser(userData);
     // return this.userService.createUser(userData);
   }
 }

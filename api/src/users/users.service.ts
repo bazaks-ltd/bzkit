@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../prisma.service';
 import { User, Prisma } from '@prisma/client';
 import * as argon2 from 'argon2';
+import { LoginUserDto } from './users.dto';
 
 @Injectable()
 export class UsersService {
@@ -42,6 +43,17 @@ export class UsersService {
         delete value.password;
         return value;
       });
+  }
+
+  async validateUser(data: LoginUserDto): Promise<String> {
+    const { password, email } = data;
+    const result = await this.prisma.user.findUnique({
+      where: {
+        email: email,
+      },
+    });
+    console.log(result);
+    return JSON.stringify(result);
   }
 
   async updateUser(params: {

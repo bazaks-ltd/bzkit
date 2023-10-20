@@ -30,4 +30,9 @@ export class PasetoService {
     const { decrypt } = paseto.V3;
     return decrypt(token, process.env.PASETO_LKEY);
   }
+
+  public async decode(token: string) {
+    const { decode } = paseto;
+    return decode(token);
+  }
 }
