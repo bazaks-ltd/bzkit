@@ -1,12 +1,16 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { PrismaService } from '../prisma.service';
 import { User, Prisma } from '@prisma/client';
 import * as argon2 from 'argon2';
 import { LoginUserDto } from './users.dto';
+import { PasetoService } from 'src/paseto/paseto.service';
 
 @Injectable()
 export class UsersService {
-  constructor(private prisma: PrismaService) {}
+  constructor(
+    private prisma: PrismaService,
+    private paseto: PasetoService,
+  ) {}
 
   async user(
     userWhereUniqueInput: Prisma.UserWhereUniqueInput,
@@ -45,15 +49,27 @@ export class UsersService {
       });
   }
 
-  async validateUser(data: LoginUserDto): Promise<String> {
+  async validateUser(data: LoginUserDto): Promise<Object> {
     const { password, email } = data;
     const result = await this.prisma.user.findUnique({
       where: {
         email: email,
       },
     });
-    console.log(result);
-    return JSON.stringify(result);
+
+    const payload = {
+      sub: result.id,
+      email: result.email,
+    };
+
+    if (!(await argon2.verify(result.password, password))) {
+      throw new UnauthorizedException();
+    }
+
+    const ptoken = await this.paseto.sign(payload);
+    return {
+      access_token: ptoken,
+    };
   }
 
   async updateUser(params: {

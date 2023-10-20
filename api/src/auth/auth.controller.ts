@@ -23,8 +23,7 @@ export class AuthController {
   async loginUser(
     @Body()
     userData: LoginUserDto,
-  ): Promise<String> {
+  ): Promise<Object> {
     return this.userService.validateUser(userData);
-    // return this.userService.createUser(userData);
   }
 }
